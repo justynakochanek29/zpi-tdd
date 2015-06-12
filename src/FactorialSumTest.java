@@ -25,5 +25,11 @@ public class FactorialSumTest {
 		int[] test = {1,2,3};
 		assertEquals("FactorialSum.sumOfFactorialDigits()",6 ,FactorialSum.sumOfFactorialDigits(test));
 	}
+	
+	@Test
+	public void getSum(){
+		FactorialSum test = new FactorialSum(10);
+		assertEquals("test.getSum()",27 ,test.getSum());
+	}
 
 }

@@ -1,5 +1,12 @@
-class FactorialSum {
+public class FactorialSum {
 	
+	private int sum = 0;
+	
+	public FactorialSum(int n) {
+		int[] array = convertIntoArray(calculateFactorial(n));
+		this.sum = sumOfFactorialDigits(array);
+	}
+
 	public static int calculateFactorial(int n){
 		int result = 1;
 		for (int i = 1; i <= n; i++){
@@ -17,5 +24,13 @@ class FactorialSum {
 		}
 		
 		return newNumber;
+	}
+	
+	public static int sumOfFactorialDigits(int[] array){
+		int result = 0;
+		for (int i = 0; i < array.length; i++){
+			result+= array[i];
+		}
+		return result;
 	}
 }
