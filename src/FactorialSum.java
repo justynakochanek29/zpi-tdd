@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 public class FactorialSum {
 	
 	/**
@@ -31,22 +33,22 @@ public class FactorialSum {
 	 * @param n - integer number
 	 * @return factorial of number from parameter
 	 */
-	public static int calculateFactorial(int n){
-		int result = 1;
+	public static BigInteger calculateFactorial(int n){
+		BigInteger result = BigInteger.valueOf(1);
 		for (int i = 1; i <= n; i++){
-			result *= i;
+			result  = result.multiply(BigInteger.valueOf(i));
 		}
 		return result;
 	}
 	
 	/**
-	 * Method convert integer number into array of its digits
+	 * Method convert BigInteger number into array of its digits
 	 * 
 	 * @param number
 	 * @return array of integer digits
 	 */
-	public static int[] convertIntoArray(int number){
-		String temp = Integer.toString(number);
+	public static int[] convertIntoArray(BigInteger number){
+		String temp = number.toString();
 		int[] numberArray = new int[temp.length()];
 		for (int i = 0; i < temp.length(); i++)
 		{
@@ -65,7 +67,7 @@ public class FactorialSum {
 	public static int sumOfFactorialDigits(int[] array){
 		int result = 0;
 		for (int i = 0; i < array.length; i++){
-			result+= array[i];
+			result += array[i];
 		}
 		return result;
 	}
