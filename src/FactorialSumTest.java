@@ -19,5 +19,11 @@ public class FactorialSumTest {
 		int[] test = {1,2,3};
 		assertArrayEquals("FactorialSum.convertIntoArray()", test, FactorialSum.convertIntoArray(123));
 	}
+	
+	@Test
+	public void sumOfFactorialDigits(){
+		int[] test = {1,2,3};
+		assertEquals("FactorialSum.sumOfFactorialDigits()",6 ,FactorialSum.sumOfFactorialDigits(test));
+	}
 
 }
